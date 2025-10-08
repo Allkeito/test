@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #555;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #e5e5e5;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.catalog-filter {
+    padding: 2rem;
+    background-color: #fff;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+}
+
+.catalog-filter select,
+.catalog-filter button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.car-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    margin-top: 2rem;
+}
+
+/* Страница деталей */
+.car-detail {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: #fff;
+    gap: 2rem;
+}
+
+.car-detail-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.car-detail-info {
+    max-width: 600px;
+    flex: 1;
+}
+
+.car-detail-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.car-detail-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}

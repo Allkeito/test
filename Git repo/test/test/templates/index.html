@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Главная - Premium Auto{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Лучшие автомобили с гарантией</h1>
+    <p>Премиум качество. Новый уровень сервиса.</p>
+    <a href="/catalog" class="btn">Смотреть каталог</a>
+</section>
+
+{% for i in tovar %}
+
+<p> {{i[1]}} </p>
+{% endfor %}
+{% endblock %}
