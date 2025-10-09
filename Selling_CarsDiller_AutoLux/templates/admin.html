@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Все заказы</h2>
+
+{% for o in orders %}
+<div class="card">
+    <p><b>ID заказа:</b> {{ o.id }}</p>
+    <p><b>Имя:</b> {{ o.name }}</p>
+    <p><b>Телефон:</b> {{ o.phone }}</p>
+    <p><b>Email:</b> {{ o.email }}</p>
+    <p><b>Машина:</b> {{ o.car_name or "—" }}</p>
+</div>
+{% else %}
+<p>Заказов пока нет.</p>
+{% endfor %}
+{% endblock %}

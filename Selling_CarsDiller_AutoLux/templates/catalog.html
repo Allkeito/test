@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Каталог автомобилей</h2>
+
+<form method="get" style="margin-bottom:20px;">
+    <input type="text" name="name" placeholder="Марка..." value="{{ filters.name }}">
+    <input type="number" name="year" placeholder="Год..." value="{{ filters.year }}">
+    <input type="number" name="min_price" placeholder="Цена от..." value="{{ filters.min_price }}">
+    <input type="number" name="max_price" placeholder="Цена до..." value="{{ filters.max_price }}">
+    <input type="submit" value="Фильтр">
+</form>
+
+{% for car in cars %}
+<div class="card">
+    <h3>{{ car.name }}</h3>
+    <p>Год: {{ car.year }}</p>
+    <p>Цена: {{ car.price }} $</p>
+    <a href="{{ car.image_url }}" target="_blank">Подробнее</a> |
+    <a href="{{ url_for('order', car_id=car.id) }}">Заказать</a>
+</div>
+{% else %}
+<p>Ничего не найдено.</p>
+{% endfor %}
+{% endblock %}
